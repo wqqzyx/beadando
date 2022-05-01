@@ -21,6 +21,9 @@ namespace Kerdesek {
         string nev = "";
         int[] nyeremenyek = new int[] { 1000, 3000, 6000, 12000, 25000, 50000, 100000, 200000, 400000, 800000, 1500000, 3000000, 6000000, 12500000, 25000000 };
         int elnyertPenz = 0;
+        bool kozonseg = false;
+        bool telefon = false;
+        bool felezes = false;
         public void bMegnyitas_Click(object sender, EventArgs e) {
             
             
@@ -37,7 +40,7 @@ namespace Kerdesek {
 
         private void lbAdatok_SelectedIndexChanged(object sender, EventArgs e) {
             int index = lbAdatok.SelectedIndex;
-            tbKerdes.Text = a.kerdesek[index].kerdes;
+            LKerdes.Text = a.kerdesek[index].kerdes;
             tbA.Text = a.kerdesek[index].a;
             tbB.Text = a.kerdesek[index].b;
             tbC.Text = a.kerdesek[index].c;
@@ -47,7 +50,7 @@ namespace Kerdesek {
 
         private void bHozzaad_Click(object sender, EventArgs e) {
             Kerdes k = new Kerdes();
-            k.kerdes = tbKerdes.Text;
+            k.kerdes = LKerdes.Text;
             k.a = tbA.Text;
             k.b = tbB.Text;
             k.c = tbC.Text;
@@ -72,10 +75,16 @@ namespace Kerdesek {
                     k.helyesValasz = Convert.ToChar(adatok[5]);
                     a.kerdesek.Add(k);
                     //lbAdatok.Items.Add(k.kerdes);
-                    
                 }
+            for (int i = 0; i < nyeremenyek.Length; i++)
+            {
+                Penz.Items.Add(nyeremenyek[i]+" Ft");
+            }
                 sr.Close();
             gen();
+            tel.Visible = false;
+            koz.Visible = false;
+            fel.Visible = false;
             //}
         }
         public void gen()
@@ -83,7 +92,8 @@ namespace Kerdesek {
             Random r = new Random();
             v = r.Next(0, a.kerdesek.Count);
             Kerdes kerdes = a.kerdesek[v];
-            tbKerdes.Text = kerdes.kerdes;
+            LKerdes.Text = kerdes.kerdes;
+            LKerdes.TextAlign = ContentAlignment.TopCenter;
             tbA.Text = kerdes.a;
             tbB.Text = kerdes.b;
             tbC.Text = kerdes.c;
@@ -106,7 +116,7 @@ namespace Kerdesek {
             {
                 pont++;
                 LPont.Text = pont.ToString();
-                k++;
+                
                 elnyertPenz = nyeremenyek[k];
                 nyeremenyek[k] = nyeremenyek[k++];
                 lbAdatok.Items.Add(elnyertPenz);
@@ -118,8 +128,8 @@ namespace Kerdesek {
                 LPont.Text = pont.ToString();
                 gen();
                 tbHelyes.Text = "";
-                string xd=elnyertPenz.ToString();
-                    MessageBox.Show("Válaszod helytelen, így kiestél a játékból, nyereményed pedig:","RIPBOZO");
+                
+                    MessageBox.Show("Válaszod helytelen, így kiestél a játékból, nyereményed pedig: {0}");
                 } 
             
             } 
@@ -138,6 +148,46 @@ namespace Kerdesek {
             tbV.Location=new Point(265,106);
             tbHelyes.Location = new Point(320, 106);
             bBekuld.Location = new Point(490, 105);
+        }
+
+        private void bSegítség_Click(object sender, EventArgs e)
+        {
+            bSegítség.Visible = false;
+            tel.Visible = true;
+            koz.Visible = true;
+            fel.Visible = true;
+        }
+
+        private void tel_Click(object sender, EventArgs e)
+        {
+            if (telefon==false)
+            {
+            int random;
+            Random r = new Random();
+            random=r.Next(0, 3);
+            TelHelp.Text = "Jóska bácsi szerint a helyes megoldás a: " + random;
+            telefon = true;
+            } 
+            else
+            {
+                MessageBox.Show( "Használtad már ezt a segítséget","Hiba",MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void koz_Click(object sender, EventArgs e)
+        {
+            if (kozonseg == false)
+            {
+                int random;
+                Random r = new Random();
+                random = r.Next(0, 3);
+                TelHelp.Text = "A közönség szavazatai szerint a helyes megoldás a: " + random;
+                kozonseg = true;
+            }
+            else
+            {
+                MessageBox.Show("Használtad már ezt a segítséget", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
