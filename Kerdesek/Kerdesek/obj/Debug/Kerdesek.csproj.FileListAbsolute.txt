@@ -40,14 +40,4 @@ C:\Users\redbu\Desktop\prog\Kerdesek\Kerdesek\obj\Debug\Kerdesek.csproj.Generate
 C:\Users\redbu\Desktop\prog\Kerdesek\Kerdesek\obj\Debug\Kerdesek.csproj.CoreCompileInputs.cache
 C:\Users\redbu\Desktop\prog\Kerdesek\Kerdesek\obj\Debug\Kerdesek.exe
 C:\Users\redbu\Desktop\prog\Kerdesek\Kerdesek\obj\Debug\Kerdesek.pdb
-C:\Users\redbu\Desktop\prog\Hegységek és hegycsúcsok\Kerdesek\Kerdesek\bin\Debug\Kerdesek.exe.config
-C:\Users\redbu\Desktop\prog\Hegységek és hegycsúcsok\Kerdesek\Kerdesek\bin\Debug\Kerdesek.exe
-C:\Users\redbu\Desktop\prog\Hegységek és hegycsúcsok\Kerdesek\Kerdesek\bin\Debug\Kerdesek.pdb
-C:\Users\redbu\Desktop\prog\Hegységek és hegycsúcsok\Kerdesek\Kerdesek\obj\Debug\Kerdesek.csproj.AssemblyReference.cache
-C:\Users\redbu\Desktop\prog\Hegységek és hegycsúcsok\Kerdesek\Kerdesek\obj\Debug\Kerdesek.csproj.SuggestedBindingRedirects.cache
-C:\Users\redbu\Desktop\prog\Hegységek és hegycsúcsok\Kerdesek\Kerdesek\obj\Debug\Kerdesek.Form1.resources
-C:\Users\redbu\Desktop\prog\Hegységek és hegycsúcsok\Kerdesek\Kerdesek\obj\Debug\Kerdesek.Properties.Resources.resources
-C:\Users\redbu\Desktop\prog\Hegységek és hegycsúcsok\Kerdesek\Kerdesek\obj\Debug\Kerdesek.csproj.GenerateResource.cache
-C:\Users\redbu\Desktop\prog\Hegységek és hegycsúcsok\Kerdesek\Kerdesek\obj\Debug\Kerdesek.csproj.CoreCompileInputs.cache
-C:\Users\redbu\Desktop\prog\Hegységek és hegycsúcsok\Kerdesek\Kerdesek\obj\Debug\Kerdesek.exe
-C:\Users\redbu\Desktop\prog\Hegységek és hegycsúcsok\Kerdesek\Kerdesek\obj\Debug\Kerdesek.pdb
+C:\Users\redbu\Desktop\prog\Kerdesek\Kerdesek\obj\Debug\Kerdesek.Form2.resources
