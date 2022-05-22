@@ -84,7 +84,7 @@ namespace Kerdesek
                 k.helyesValasz = Convert.ToChar(adatok[5]);
                 a.kerdesek.Add(k);
             }
-            for (int i = 1; i < nyeremenyek.Length; i++)
+            for (int i = 0; i < nyeremenyek.Length; i++)
             {
                 Penz.Items.Add($"{i} " + nyeremenyek[i] + " Ft");
             }
@@ -104,13 +104,14 @@ namespace Kerdesek
             bC.Text = kerdes.c;
             bD.Text = kerdes.d;
             tbHelyes.Text = kerdes.helyesValasz.ToString();
+
         }
         private void bA_Click(object sender, EventArgs e)
         {
             string valasz = "1";
             Kerdes kerdes = a.kerdesek[v];
             string megoldas = kerdes.helyesValasz.ToString();
-            if (valasz == megoldas && elnyertPenz != 25000000)
+            if (valasz == megoldas && Penz.SelectedIndex != 14)
             {
                 elnyertPenz = nyeremenyek[k];
                 nyeremenyek[k] = nyeremenyek[k++];
@@ -118,14 +119,14 @@ namespace Kerdesek
                 o++;
                 Penz.SelectedIndex = o;
                 gen();
-                //bA.BackColor = Color.DarkBlue;
+                elrejt();
             }
             else
             {
                 MessageBox.Show("Válaszod helytelen, így kiestél a játékból, nyereményed pedig: " + elnyertPenz.ToString() + " Ft");
                 Application.Exit();
             }
-            if (elnyertPenz == 25000000 && o == 14 && lbAdatok.SelectedIndex == 13)
+            if (Penz.SelectedIndex == 14)
             {
                 MessageBox.Show("Gratulálok, megnyerted a főnyereményt! A játék itt véget ér. Nyereményed: " + elnyertPenz.ToString() + " Ft");
                 Application.Exit();
@@ -143,11 +144,10 @@ namespace Kerdesek
 
         private void bB_Click(object sender, EventArgs e)
         {
-            bB.BackColor = Color.Orange;
             string valasz = "2";
             Kerdes kerdes = a.kerdesek[v];
             string megoldas = kerdes.helyesValasz.ToString();
-            if (valasz == megoldas && elnyertPenz != 25000000)
+            if (valasz == megoldas && Penz.SelectedIndex != 14)
             {
                 elnyertPenz = nyeremenyek[k];
                 nyeremenyek[k] = nyeremenyek[k++];
@@ -155,13 +155,14 @@ namespace Kerdesek
                 o++;
                 Penz.SelectedIndex = o;
                 gen();
+                elrejt();
             }
             else
             {
                 MessageBox.Show("Válaszod helytelen, így kiestél a játékból, nyereményed pedig: " + elnyertPenz.ToString() + " Ft");
                 Application.Exit();
             }
-            if (elnyertPenz == 25000000 && o == 14 && lbAdatok.SelectedIndex == 13)
+            if (Penz.SelectedIndex == 14)
             {
                 MessageBox.Show("Gratulálok, megnyerted a főnyereményt! A játék itt véget ér. Nyereményed: " + elnyertPenz.ToString() + " Ft");
                 Application.Exit();
@@ -174,16 +175,15 @@ namespace Kerdesek
             {
                 tel.Visible=false;
             }
-            bB.BackColor = Color.DarkBlue;
+            
         }
 
         private void bC_Click(object sender, EventArgs e)
         {
-            bC.BackColor = Color.Orange;
             string valasz = "3";
             Kerdes kerdes = a.kerdesek[v];
             string megoldas = kerdes.helyesValasz.ToString();
-            if (valasz == megoldas && elnyertPenz != 25000000)
+            if (valasz == megoldas && Penz.SelectedIndex != 14)
             {
                 elnyertPenz = nyeremenyek[k];
                 nyeremenyek[k] = nyeremenyek[k++];
@@ -191,14 +191,14 @@ namespace Kerdesek
                 o++;
                 Penz.SelectedIndex = o;
                 gen();
+                elrejt();
             }
             else
             {
-                
                 MessageBox.Show("Válaszod helytelen, így kiestél a játékból, nyereményed pedig: " + elnyertPenz.ToString() + " Ft");
                 Application.Exit();
             }
-            if (elnyertPenz == 25000000 && o==14 && lbAdatok.SelectedIndex == 13)
+            if (Penz.SelectedIndex == 14)
             {
                 MessageBox.Show("Gratulálok, megnyerted a főnyereményt! A játék itt véget ér. Nyereményed: " + elnyertPenz.ToString() + " Ft");
                 Application.Exit();
@@ -211,16 +211,16 @@ namespace Kerdesek
             {
                 tel.Visible = false;
             }
-            bC.BackColor = Color.DarkBlue;
+            
         }
 
         private void bD_Click(object sender, EventArgs e)
         {
-            bD.BackColor = Color.Orange;
+            
             string valasz = "4";
             Kerdes kerdes = a.kerdesek[v];
             string megoldas = kerdes.helyesValasz.ToString();
-            if (valasz == megoldas && elnyertPenz != 25000000)
+            if (valasz == megoldas && Penz.SelectedIndex != 14)
             {
                 elnyertPenz = nyeremenyek[k];
                 nyeremenyek[k] = nyeremenyek[k++];
@@ -228,13 +228,14 @@ namespace Kerdesek
                 o++;
                 Penz.SelectedIndex = o;
                 gen();
+                elrejt();
             }
             else
             {
                 MessageBox.Show("Válaszod helytelen, így kiestél a játékból, nyereményed pedig: " + elnyertPenz.ToString() + " Ft");
                 Application.Exit();
             }
-            if (elnyertPenz == 25000000 && o == 14 && lbAdatok.SelectedIndex == 13)
+            if (Penz.SelectedIndex==14)
             {
                 MessageBox.Show("Gratulálok, megnyerted a főnyereményt! A játék itt véget ér. Nyereményed: " +elnyertPenz.ToString() + " Ft");
                 Application.Exit();
@@ -247,58 +248,31 @@ namespace Kerdesek
             {
                 tel.Visible = false;
             }
-            bD.BackColor = Color.DarkBlue;
+            
         }
         private void fel_Click(object sender, EventArgs e)
         {
             Kerdes k = new Kerdes();
-            if (felezes == false)
+            int random;
+            Random r = new Random();
+            if (felezes==false)
             {
-                List<string> maradek = new List<string>();
-                switch (Convert.ToInt32(k.helyesValasz))
-                {
-                    case 1: maradek.Add(k.a); break;
-                    case 2: maradek.Add(k.b); break;
-                    case 3: maradek.Add(k.c); break;
-                    case 4: maradek.Add(k.d); break;
-                }
-                int uj;
-                Random r = new Random();
-                do
-                {
-                    uj = r.Next(1, 4);
-                } while (uj == k.helyesValasz);
-                switch (uj)
-                {
-                    case 1: maradek.Add(k.a); break;
-                    case 2: maradek.Add(k.b); break;
-                    case 3: maradek.Add(k.c); break;
-                    case 4: maradek.Add(k.d); break;
-                }
-
-                for (int j = 0; j < maradek.Count; j++)
-                {
-                    if (maradek[j] == k.a)
-                    {
-                        label6.Visible = false;
-                        bA.Visible = false;
-                    }
-                    else if (maradek[j] == k.b)
-                    {
-                        label5.Visible = false;
-                        bB.Visible = false;
-                    }
-                    else if (maradek[j] == k.c)
-                    {
-                        label4.Visible = false;
-                        bC.Visible = false;
-                    }
-                    else
-                    {
-                        label3.Visible = false;
-                        bD.Visible = false;
-                    }
-                }
+            random = r.Next(1, 4);
+            switch (random)
+            {
+                case 1:
+                    bA.Visible = false;
+                    break;
+                case 2:
+                    bB.Visible = false;
+                    break;
+                case 3:
+                    bC.Visible = false;
+                    break;
+                case 4:
+                    bD.Visible = false;
+                    break;
+            }
             }
         }
         private void tel_Click(object sender, EventArgs e)
@@ -310,7 +284,7 @@ namespace Kerdesek
                 random = r.Next(1, 4);
 
                 Kerdes kerdes = a.kerdesek[v];
-                kell();
+                
                 switch (random)
                 {
                     case 1:
@@ -334,15 +308,30 @@ namespace Kerdesek
                 MessageBox.Show("Használtad már ezt a segítséget", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        bool latszodikAdiagram = false;
+        private void elrejt()
+        {
+            if (latszodikAdiagram)
+            {
+                koz.Visible = false;
+                Panel.Visible = false;
+                pA.Visible = false;
+                pB.Visible = false;
+                pC.Visible = false;
+                pD.Visible = false;
+            }   
+        }
 
         private void koz_Click(object sender, EventArgs e)
         {
+            latszodikAdiagram = true;
             if (kozonseg==false)
             {
             koz.Visible = false;
             Panel.Visible = true;
 
             idozito.Start();
+            //elrejt();
 
             pA.Visible = true;
             pB.Visible = true;
@@ -350,7 +339,8 @@ namespace Kerdesek
             pD.Visible = true;
             mB.Text= "A százalékok a közönség magabiztosságát jelzi az egyes válaszokban.";
             }
-            else
+
+            if(kozonseg==true)
             {
                 MessageBox.Show("Használtad már ezt a segítséget", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

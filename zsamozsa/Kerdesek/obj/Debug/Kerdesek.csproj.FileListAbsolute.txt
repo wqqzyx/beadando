@@ -53,3 +53,14 @@ C:\Users\redbu\Desktop\prog\zsamozsa\Kerdesek\obj\Debug\Kerdesek.csproj.Generate
 C:\Users\redbu\Desktop\prog\zsamozsa\Kerdesek\obj\Debug\Kerdesek.csproj.CoreCompileInputs.cache
 C:\Users\redbu\Desktop\prog\zsamozsa\Kerdesek\obj\Debug\Kerdesek.exe
 C:\Users\redbu\Desktop\prog\zsamozsa\Kerdesek\obj\Debug\Kerdesek.pdb
+H:\Prog\zsamozsa\Kerdesek\obj\Debug\Kerdesek.csproj.AssemblyReference.cache
+H:\Prog\zsamozsa\Kerdesek\obj\Debug\Kerdesek.Form1.resources
+H:\Prog\zsamozsa\Kerdesek\obj\Debug\Kerdesek.Form2.resources
+H:\Prog\zsamozsa\Kerdesek\obj\Debug\Kerdesek.Properties.Resources.resources
+H:\Prog\zsamozsa\Kerdesek\obj\Debug\Kerdesek.csproj.GenerateResource.cache
+H:\Prog\zsamozsa\Kerdesek\obj\Debug\Kerdesek.csproj.CoreCompileInputs.cache
+H:\Prog\zsamozsa\Kerdesek\obj\Debug\Kerdesek.exe
+H:\Prog\zsamozsa\Kerdesek\obj\Debug\Kerdesek.pdb
+H:\Prog\zsamozsa\Kerdesek\bin\Debug\Kerdesek.exe.config
+H:\Prog\zsamozsa\Kerdesek\bin\Debug\Kerdesek.exe
+H:\Prog\zsamozsa\Kerdesek\bin\Debug\Kerdesek.pdb
