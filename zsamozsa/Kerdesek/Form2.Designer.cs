@@ -62,11 +62,7 @@
             this.pA = new System.Windows.Forms.Label();
             this.idozito = new System.Windows.Forms.Timer(this.components);
             this.mB = new System.Windows.Forms.Label();
-            this.bMentes = new System.Windows.Forms.Button();
-            this.bHozzaad = new System.Windows.Forms.Button();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.Panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // TelHelp
@@ -87,7 +83,7 @@
             this.Penz.ItemHeight = 18;
             this.Penz.Location = new System.Drawing.Point(709, 23);
             this.Penz.Name = "Penz";
-            this.Penz.Size = new System.Drawing.Size(123, 272);
+            this.Penz.Size = new System.Drawing.Size(123, 254);
             this.Penz.TabIndex = 75;
             // 
             // LKerdes
@@ -102,7 +98,7 @@
             // lbAdatok
             // 
             this.lbAdatok.FormattingEnabled = true;
-            this.lbAdatok.Location = new System.Drawing.Point(721, 402);
+            this.lbAdatok.Location = new System.Drawing.Point(709, 320);
             this.lbAdatok.Name = "lbAdatok";
             this.lbAdatok.Size = new System.Drawing.Size(133, 56);
             this.lbAdatok.TabIndex = 63;
@@ -242,6 +238,7 @@
             this.tbHelyes.Name = "tbHelyes";
             this.tbHelyes.Size = new System.Drawing.Size(164, 20);
             this.tbHelyes.TabIndex = 51;
+            this.tbHelyes.Visible = false;
             // 
             // label17
             // 
@@ -393,35 +390,17 @@
             this.mB.AutoSize = true;
             this.mB.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold);
             this.mB.ForeColor = System.Drawing.Color.White;
-            this.mB.Location = new System.Drawing.Point(164, -1);
+            this.mB.Location = new System.Drawing.Point(218, -1);
             this.mB.Name = "mB";
-            this.mB.Size = new System.Drawing.Size(52, 21);
+            this.mB.Size = new System.Drawing.Size(278, 21);
             this.mB.TabIndex = 86;
-            this.mB.Text = "asdasda";
-            // 
-            // bMentes
-            // 
-            this.bMentes.Location = new System.Drawing.Point(284, 402);
-            this.bMentes.Name = "bMentes";
-            this.bMentes.Size = new System.Drawing.Size(111, 23);
-            this.bMentes.TabIndex = 64;
-            this.bMentes.Text = "Mentés";
-            this.bMentes.UseVisualStyleBackColor = true;
-            // 
-            // bHozzaad
-            // 
-            this.bHozzaad.Location = new System.Drawing.Point(61, 402);
-            this.bHozzaad.Name = "bHozzaad";
-            this.bHozzaad.Size = new System.Drawing.Size(198, 23);
-            this.bHozzaad.TabIndex = 62;
-            this.bHozzaad.Text = "Hozzáad";
-            this.bHozzaad.UseVisualStyleBackColor = true;
+            this.mB.Text = "A közönség ennyire biztos az egyes válaszokban:";
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(866, 480);
+            this.ClientSize = new System.Drawing.Size(848, 392);
             this.Controls.Add(this.mB);
             this.Controls.Add(this.bB);
             this.Controls.Add(this.bD);
@@ -434,9 +413,7 @@
             this.Controls.Add(this.Penz);
             this.Controls.Add(this.LKerdes);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.bMentes);
             this.Controls.Add(this.lbAdatok);
-            this.Controls.Add(this.bHozzaad);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -449,7 +426,6 @@
             this.Load += new System.EventHandler(this.Form2_Load_1);
             this.Panel.ResumeLayout(false);
             this.Panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -489,8 +465,5 @@
         private System.Windows.Forms.Label kB;
         private System.Windows.Forms.Label kC;
         private System.Windows.Forms.Label mB;
-        private System.Windows.Forms.Button bMentes;
-        private System.Windows.Forms.Button bHozzaad;
-        private System.Windows.Forms.BindingSource bindingSource1;
     }
 }

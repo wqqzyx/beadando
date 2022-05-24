@@ -40,18 +40,26 @@ namespace Kerdesek {
             // tbAdd
             // 
             this.tbAdd.AutoSize = true;
-            this.tbAdd.Location = new System.Drawing.Point(202, 95);
+            this.tbAdd.BackColor = System.Drawing.Color.Transparent;
+            this.tbAdd.Font = new System.Drawing.Font("Myanmar Text", 11.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tbAdd.Location = new System.Drawing.Point(113, 97);
+            this.tbAdd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.tbAdd.Name = "tbAdd";
-            this.tbAdd.Size = new System.Drawing.Size(94, 13);
+            this.tbAdd.Size = new System.Drawing.Size(150, 29);
             this.tbAdd.TabIndex = 33;
             this.tbAdd.Text = "Add meg a neved:";
             // 
             // tbNev
             // 
-            this.tbNev.Location = new System.Drawing.Point(302, 92);
+            this.tbNev.BackColor = System.Drawing.Color.DarkBlue;
+            this.tbNev.Font = new System.Drawing.Font("Myanmar Text", 15F, System.Drawing.FontStyle.Bold);
+            this.tbNev.ForeColor = System.Drawing.Color.White;
+            this.tbNev.Location = new System.Drawing.Point(280, 89);
+            this.tbNev.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tbNev.Multiline = true;
             this.tbNev.Name = "tbNev";
-            this.tbNev.Size = new System.Drawing.Size(233, 31);
+            this.tbNev.Size = new System.Drawing.Size(223, 38);
             this.tbNev.TabIndex = 34;
             // 
             // notifyIcon1
@@ -61,24 +69,34 @@ namespace Kerdesek {
             // 
             // tbNevH
             // 
-            this.tbNevH.Location = new System.Drawing.Point(205, 129);
+            this.tbNevH.BackColor = System.Drawing.Color.DarkBlue;
+            this.tbNevH.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.tbNevH.Font = new System.Drawing.Font("Myanmar Text", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tbNevH.ForeColor = System.Drawing.Color.White;
+            this.tbNevH.Location = new System.Drawing.Point(119, 139);
+            this.tbNevH.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tbNevH.Name = "tbNevH";
-            this.tbNevH.Size = new System.Drawing.Size(330, 54);
+            this.tbNevH.Size = new System.Drawing.Size(385, 58);
             this.tbNevH.TabIndex = 35;
-            this.tbNevH.Text = "Regisztralas";
-            this.tbNevH.UseVisualStyleBackColor = true;
+            this.tbNevH.Text = "Regisztráció";
+            this.tbNevH.UseVisualStyleBackColor = false;
             this.tbNevH.Click += new System.EventHandler(this.tbNevH_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(820, 433);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(673, 263);
             this.Controls.Add(this.tbNevH);
             this.Controls.Add(this.tbNev);
             this.Controls.Add(this.tbAdd);
+            this.Font = new System.Drawing.Font("Myanmar Text", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Form1";
-            this.Text = " ";
+            this.Text = "Felvétel";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

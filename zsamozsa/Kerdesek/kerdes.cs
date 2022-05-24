@@ -8,7 +8,6 @@ namespace Kerdesek {
     class Kerdes {
         public string kerdes, a, b, c, d;
         public char helyesValasz;
-
         public Kerdes() {
         }
 
